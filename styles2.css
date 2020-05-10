@@ -1,0 +1,10 @@
+body {
+    background: rgb(0,242,96);
+    background: linear-gradient(90deg, rgba(0,242,96,1) 35%, rgba(5,117,230,1) 100%);
+}
+
+h1, h3 {
+    font-size: 108px;
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+  }
