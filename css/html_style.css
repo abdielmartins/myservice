@@ -1,0 +1,61 @@
+
+.navbar {
+    background-color: rgb(255, 255, 255);
+}
+
+.quem-somos{
+    background-color: rgba(219, 255, 221, 0.767);
+}
+
+.parceiros {
+    background-color: rgba(219, 255, 252, 0.767);
+}
+
+.img-parc {
+    width: 200px;
+    margin: 50px;
+}
+
+h2 {
+    margin-top: 50px;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(228, 248, 229);
+}
+
+p {
+    font-family: Verdana;
+    font: 20px;
+    margin: 30px;
+}
+
+.h-text {
+    color: rgb(0, 34, 78);
+}
+
+.color-text {
+    color: rgb(92, 92, 92);
+}
+
+.margin {
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.margin-img {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.img-tam {
+    width: 500px;
+    height: 500px;
+}
+
+.bg-footer {
+    background-color: black;
+    color: white;
+    padding-bottom: 80px;
+}
