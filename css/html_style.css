@@ -3,6 +3,16 @@
     background-color: rgb(255, 255, 255);
 }
 
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.sm-logo {
+    width: 25px;
+    height: 25px;
+}
+
 .quem-somos{
     background-color: rgba(219, 255, 221, 0.767);
 }
@@ -11,18 +21,22 @@
     background-color: rgba(219, 255, 252, 0.767);
 }
 
+.nav-text {
+    font-family: 'Segoe UI';
+}
+
 .img-parc {
     width: 200px;
     margin: 50px;
 }
 
 h2 {
-    font-family: 'Lucida Sans';
+    font-family: 'Segoe UI';
     margin-top: 50px;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: Verdana;
     background-color: rgb(255, 255, 255);
 }
 
@@ -33,7 +47,7 @@ p {
 }
 
 .psml {
-    font-family: 'Lucida Sans';
+    font-family: 'Segoe UI';
     font: 10px;
     color: rgba(0, 255, 200, 0.445)
 }
