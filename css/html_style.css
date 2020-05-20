@@ -17,12 +17,13 @@
 }
 
 h2 {
+    font-family: 'Lucida Sans';
     margin-top: 50px;
 }
 
 body {
     font-family: sans-serif;
-    background-color: rgb(228, 248, 229);
+    background-color: rgb(255, 255, 255);
 }
 
 p {
@@ -31,8 +32,14 @@ p {
     margin: 30px;
 }
 
+.psml {
+    font-family: 'Lucida Sans';
+    font: 10px;
+    color: rgba(0, 255, 200, 0.445)
+}
+
 .h-text {
-    color: rgb(0, 34, 78);
+    color: rgb(0, 0, 0);
 }
 
 .color-text {
@@ -45,17 +52,17 @@ p {
 }
 
 .margin-img {
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 
 .img-tam {
-    width: 500px;
-    height: 500px;
+    width: 350px;
+    height: 350px;
 }
 
 .bg-footer {
     background-color: black;
     color: white;
-    padding-bottom: 80px;
+    padding-bottom: 5px;
 }
