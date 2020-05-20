@@ -8,17 +8,28 @@
     height: 50px;
 }
 
+.carousel-div {
+    width: 1850px;
+    height: 600px;
+    margin-left: 12px;
+}
+
 .sm-logo {
     width: 25px;
     height: 25px;
 }
 
 .quem-somos{
-    background-color: rgba(219, 255, 221, 0.767);
+    margin-right: 20px;
+    margin-top: 50px;
+    background-color: rgb(219, 255, 221);
 }
 
 .parceiros {
-    background-color: rgba(219, 255, 252, 0.767);
+    margin-right: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: rgb(219, 255, 252);
 }
 
 .nav-text {
@@ -37,7 +48,7 @@ h2 {
 
 body {
     font-family: Verdana;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(202, 202, 202);
 }
 
 p {
