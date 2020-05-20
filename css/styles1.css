@@ -1,7 +1,7 @@
 h1, h3 {
     font-size: 108px;
     background: -webkit-linear-gradient(#00F260, #0575E6);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Work Sans', sans-serif;
   }
