@@ -1,14 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="../myservice/static/css/html_style.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     </head>
     <body>
         <nav class="nav-text navbar navbar-expand-md fixed-top navbar-dark bg-dark">
             <a class="navbar-brand" href="#">
-                <img src="img/myservice.png" class="logo">
+                <img src="{% static 'images/myservice.png' %}" class="logo">
             </a>
             <div class="navbar-collapse offcanvas-collapse">
                 <ul class="nav navbar-nav navbar-collapse">
@@ -34,7 +35,7 @@
                 <form class="form-inline my-2 my-lg-0 navbar-nav">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Procurar">
                     <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
-                        <img src="img/search.png" class="sm-logo">
+                        <img src="{% static 'images/search.png' %}" class="sm-logo">
                     </button>
                 </form>
             </div>
@@ -48,7 +49,7 @@
             </ol>
             <div class="carousel-div carousel-inner">
               <div class="carousel-item active">
-                <img class="first-slide" src="img/service1.jpg" alt="First slide">
+                <img class="first-slide" src="{% static 'images/service1.jpg' %} alt="First slide">
                 <div class="container">
                   <div class="carousel-caption text-left">
                     <h1>Seja bem-vind@ ao MyService!</h1>
@@ -58,7 +59,7 @@
                 </div>
               </div>
               <div class="carousel-div  carousel-item">
-                <img class="second-slide" src="img/service2.jpg" alt="Second slide">
+                <img class="second-slide" src="{% static 'images/service2.jpg' %}" alt="Second slide">
                 <div class="container">
                   <div class="carousel-caption">
                     <h1>Você faz acontecer!</h1>
@@ -67,7 +68,7 @@
                 </div>
               </div>
               <div class="carousel-div carousel-item">
-                <img class="third-slide" src="img/service3.jpg" alt="Third slide">
+                <img class="third-slide" src="{% static 'images/service3.jpg' %}" alt="Third slide">
                 <div class="container">
                   <div class="carousel-caption text-right">
                     <h1>Muito mais do que você imagina</h1>
@@ -155,6 +156,7 @@
         <footer class="container-fluid text-center bg-footer">
             <p class="psml">© Copyright - 2020</p>
         </footer>
+        <script src="{% static 'js/carousel.js' %}"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
