@@ -1,93 +1,10 @@
-
-.navbar {
-    background-color: rgb(255, 255, 255);
-}
-
-.logo {
-    width: 50px;
-    height: 50px;
-}
-
-.carousel-div {
-    width: 1850px;
-    height: 600px;
-    margin-left: 12px;
-}
-
-.sm-logo {
-    width: 25px;
-    height: 25px;
-}
-
-.quem-somos{
-    margin-right: 20px;
-    margin-top: 50px;
-    background-color: rgb(219, 255, 221);
-}
-
-.parceiros {
-    margin-right: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background-color: rgb(219, 255, 252);
-}
-
-.nav-text {
-    font-family: 'Segoe UI';
-}
-
-.img-parc {
-    width: 200px;
-    margin: 50px;
-}
-
-h2 {
-    font-family: 'Segoe UI';
-    margin-top: 50px;
-}
-
 body {
-    font-family: Verdana;
-    background-color: rgb(202, 202, 202);
+    font-family: 'Work Sans', sans-serif;
 }
 
-p {
-    font-family: Verdana;
-    font: 20px;
-    margin: 30px;
-}
-
-.psml {
-    font-family: 'Segoe UI';
-    font: 10px;
-    color: rgba(0, 255, 200, 0.445)
-}
-
-.h-text {
-    color: rgb(0, 0, 0);
-}
-
-.color-text {
-    color: rgb(92, 92, 92);
-}
-
-.margin {
-    margin-top: 80px;
-    margin-bottom: 50px;
-}
-
-.margin-img {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.img-tam {
-    width: 350px;
-    height: 350px;
-}
-
-.bg-footer {
-    background-color: black;
-    color: white;
-    padding-bottom: 5px;
+#gradient {
+    font-size: 32px;
+    background: -webkit-linear-gradient(#00F260, #0575E6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
