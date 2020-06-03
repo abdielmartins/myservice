@@ -1,0 +1,10 @@
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+#gradient {
+    font-size: 32px;
+    background: -webkit-linear-gradient(#00F260, #0575E6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
