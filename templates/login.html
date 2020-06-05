@@ -1,0 +1,75 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+
+    <title>My Service</title>
+
+    <!-- Worker SANS import -->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Custom styles for this website -->
+    <link href="{% static "css/styleLogin.css" %}" rel="stylesheet">
+  </head>
+   <body>
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 text-center"><img src="{% static "images/myservice.png"%}" class="img-fluid w-50" alt="MyService"></div>
+            <div class="col-md-3"></div>
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <h3 class="text-center" id="gradientText">
+                  Entrar no MyService
+               </h3>
+            </div>
+         </div>
+         <hr>
+         <div class="row">
+            <div class="col-md-12">
+               <form method="POST">
+                  {% csrf_token %}
+                  {{ form|crispy }}
+                  <hr>
+                  <div class="row">
+                     <div class="col-md-12 text-center">
+                        <div class="row text-center">
+                           <div class="col-md-1"></div>
+                           <div class="col-md-3 text-center"><i class='fab fa-apple' style='font-size:24px;color:green'></i></div>
+                           <div class="col-md-4 text-center"><i class='fab fa-facebook-f' style='font-size:24px;color:green'></i></div>
+                           <div class="col-md-3 text-center"><i class='fab fa-google' style='font-size:24px;color:green'></i></div>
+                           <div class="col-md-1"></div>
+                        </div>
+                     </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                     <div class="col-md-2"></div>
+                     <div class="col-md-4 text-center">
+                        <a class="btn btn-outline-info" href="{% url 'home' %}" role="button">Voltar</a>
+                     </div>
+                     <div class="col-md-4 text-center">
+                        <button class="btn btn-outline-info" type="submit">Logar</button>
+                     </div>
+                     <div class="col-md-2"></div>
+                  </div>   
+               </form>
+            </div>   
+         </div>
+      </div>
+      <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+   </body>
+</html>

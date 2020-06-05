@@ -28,8 +28,8 @@ class UserLoginForm(forms.Form):
 
 
 class UserRegisterForm(forms.ModelForm):
-    email = forms.EmailField(label='Email address')
-    email2 = forms.EmailField(label='Confirm Email')
+    email = forms.EmailField(label='Seu Email:')
+    email2 = forms.EmailField(label='Confirme seu Email:')
     password = forms.CharField(widget=forms.PasswordInput)
 
     class Meta:
@@ -48,6 +48,5 @@ class UserRegisterForm(forms.ModelForm):
             raise forms.ValidationError("Os emails não são iguais")
         email_qs = User.objects.filter(email=email)
         if email_qs.exists():
-            raise forms.ValidationError(
-                "Email já cadastrado em nosso banco de dados.")
+            raise forms.ValidationError("Email já cadastrado em nosso banco de dados.")
         return super(UserRegisterForm, self).clean(*args, **kwargs)
