@@ -23,19 +23,18 @@
   <body>
 
     <header>
-        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-            <img class="" src="{% static "images/myservice.png" %}" alt="" width="72" height="72">
-            <h5 class="my-0 mr-md-auto" id="gradient">MyService</h5>
-            <nav class="my-2 my-md-0 mr-md-3">
-              <a class="btn btn-outline-info" href="#">Serviço</a>
-              <a class="btn btn-outline-info" href="#">Sobre</a>
-              <a class="btn btn-outline-info" href="#">Chat</a>
-              <a class="btn btn-outline-info" href="#">FAQ / SAC</a>
-              <a class="btn btn-info" href="#">Quero trabalhar</a>
-              <a class="btn btn-info" href="#">Registre-se</a>
-            </nav>
-          </div> 
-    </header>
+      <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom border-info shadow-sm">
+          <a href="{% url 'home' %}"><img class="" src="{% static "images/myservice.png" %}" alt="" width="72" height="72"></a>
+          <h5 class="my-0 mr-md-auto" id="gradient">My Service</h5>
+          <nav class="my-2 my-md-0 mr-md-3">
+            <a class="btn btn-outline-info" href="{% url 'about' %}">Sobre</a>
+            <a class="btn btn-outline-info" href="{% url 'faq' %}">FAQ / SAC</a>
+            <a class="btn btn-outline-info" href="#">Quero Trabalhar</a>
+            <a class="btn btn-info" href="{% url 'register' %}">Registre-se</a>
+            <a class="btn btn-info" href="{% url 'login' %}">Login</a>
+          </nav>
+        </div> 
+  </header>
 
     <main role="main">
       <div class="jumbotron">
