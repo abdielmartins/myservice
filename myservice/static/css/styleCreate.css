@@ -1,7 +1,6 @@
 .textleft {
+    margin-top: 50px;
     margin-left: 400px;
-}
-
-.box-text {
-    margin: right;
+    margin-right: 400px;
+    margin-bottom: 50px;
 }
