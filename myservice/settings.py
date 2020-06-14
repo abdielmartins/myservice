@@ -27,7 +27,8 @@ INSTALLED_APPS = [
     'accounts',
     'myservice',
     'crispy_forms',
-    'services'
+    'services',
+    'validation'
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

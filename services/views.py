@@ -7,6 +7,7 @@ def main(request):
     services = Services.objects
     return render(request, 'services/main.html', {'services':services})
 
+
 @login_required
 def create(request):
     if request.method == 'POST':
