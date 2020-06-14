@@ -23,22 +23,28 @@
   <body>
 
     <header>
-        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-            <img class="" src="{% static "images/myservice.png" %}" alt="" width="72" height="72">
-            <h5 class="my-0 mr-md-auto" id="gradient">MyService</h5>
-            <nav class="my-2 my-md-0 mr-md-3">
-              <a class="btn btn-outline-info" href="#">Serviço</a>
-              <a class="btn btn-outline-info" href="#">Sobre</a>
-              <a class="btn btn-outline-info" href="#">Chat</a>
-              <a class="btn btn-outline-info" href="#">FAQ / SAC</a>
-              <a class="btn btn-info" href="#">Quero trabalhar</a>
-              <a class="btn btn-info" href="#">Registre-se</a>
-            </nav>
-          </div> 
-    </header>
+      <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom border-info shadow-sm">
+          <a href="{% url 'home' %}"><img class="" src="{% static "images/assets/myservice.png" %}" alt="" width="72" height="72"></a>
+          <h5 class="my-0 mr-md-auto" id="gradient">My Service</h5>
+          <nav class="my-2 my-md-0 mr-md-3">
+            {% if user.is_authenticated %}
+            <a class="btn btn-outline-info" href="{% url 'about' %}">Sobre</a>
+            <a class="btn btn-outline-info" href="{% url 'faq' %}">FAQ / SAC</a>
+            <a class="btn btn-info" href="{% url 'create' %}">Anunciar</a>
+            <a class="btn btn-info" href="{% url 'main' %}">Contratar</a>
+            <a class="btn btn-info" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <a class="btn btn-outline-info" href="{% url 'about' %}">Sobre</a>
+            <a class="btn btn-outline-info" href="{% url 'faq' %}">FAQ / SAC</a>
+            <a class="btn btn-info" href="{% url 'register' %}">Registre-se</a>
+            <a class="btn btn-info" href="{% url 'login' %}">Login</a>
+            {% endif %}
+          </nav>
+        </div> 
+  </header>
 
     <main role="main">
-      <div class="jumbotron">
+      <div class="jumbotron bg-white">
           <div class="container">
             <h1 class="display-3" id="gradient">Sobre nós</h1>
             <p>A MyService é uma plataforma criada durante a crise gerada pela pandemia do Covid-19, que une o cliente diretamente com o prestador de serviços.
@@ -54,7 +60,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="{% static "images/hanna.jpg" %}" alt="Card image cap">
+            <img class="card-img-top" src="{% static "images/founders/hanna.jpg" %}" alt="Card image cap">
             <div class="card-body">
               <p class="card-text">Hanna Coutinho</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -66,7 +72,7 @@
         </div>
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="{% static "images/abdiel.jpg" %}" alt="Card image cap">
+            <img class="card-img-top" src="{% static "images/founders/abdiel.jpg" %}" alt="Card image cap">
             <div class="card-body">
               <p class="card-text">Abdiel Martins</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -78,7 +84,7 @@
         </div>
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="{% static "images/daniel.jpg" %}" alt="Card image cap">
+            <img class="card-img-top" src="{% static "images/founders/daniel.jpg" %}" alt="Card image cap">
             <div class="card-body">
               <p class="card-text">Daniel Nowak</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -91,45 +97,36 @@
 
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <img class="card-img-top" src="{% static "images/founders/vittorio.jpeg" %}" alt="Card image cap">
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Vittorio Perotto</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
-                <small class="text-muted">9 mins</small>
               </div>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <img class="card-img-top" src="{% static "images/founders/arthur-alt.jpeg" %}" alt="Card image cap">
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Arthur Henrique Reis de Carvalho</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
-                <small class="text-muted">9 mins</small>
               </div>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <img class="card-img-top" src="{% static "images/founders/hanna.jpg" %}" alt="Card image cap">
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Gustavo Santos</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
-                <small class="text-muted">9 mins</small>
               </div>
             </div>
           </div>
@@ -144,11 +141,10 @@
     <footer class="text-muted">
       <div class="container">
         <p class="float-right">
-          <a href="#">Back to top</a>
+          <a href="#">Voltar ao inicio</a>
         </p>
-        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
-      </div>
+        <p>&copy; 2020, MyService Serviços de Internet. CNPJ 11.111.111/0001-11 - Av. Presidente, 1000 - Curitiba/SP - Brasil</p>
+        </div>
     </footer>
 
     <!-- Bootstrap core JavaScript
