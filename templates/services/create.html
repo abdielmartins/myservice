@@ -18,6 +18,10 @@
 
     <!-- Custom styles for this website -->
     <link href="{% static "css/styles.css" %}" rel="stylesheet">
+
+    <!-- CSS criado por Vittorio para a create.html -->
+    <link href="{% static "css/styleCreate.css" %}" rel="stylesheet">
+
   </head>
 
   <body>
@@ -42,32 +46,36 @@
           </nav>
         </div> 
     </header>
-
-    <h1> create </h1>
-
-    <form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
-    {% csrf_token %}
-    Title:
-    <br />
-    <input type="text" name="title" />
-    <br />
-    Body:
-    <br />
-    <input type="textbox" name="body" />
-    <br /> 
-    Icon:
-    <br />
-    <input type="file" name="icon" />
-    <br /> 
-    Image:
-    <br />
-    <input type="file" name="image" />
-    <br />
-    <br />
-    <input class="btn btn-info" type="submit" value="add service">  
-    </form>
-
   
+  <section>
+    <form>
+      <div class="container textleft">
+        <h1><center>Criação de Anúncio</center></h1>
+        <br /><br />
+        <div class="form-group">
+          <form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+          <label for="titleAnnounce">Título do Anúncio:</label>
+          <input type="text" name="title" class="form-control" id="titleAnnounce" aria-describedby="titleHelp" placeholder="Coloque um título...">
+          <small id="titleHelp" class="form-text text-muted">Ex.: Procuro pessoas que aceitem ser escravos.</small>
+        </div>
+        <div class="form-group">
+          <label for="description">Descrição:</label>
+          <textarea type="textbox" name="body" class="form-control" id="description" rows="5" placeholder="Descrição do anúncio..."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="photoPerson">Foto do perfil:</label>
+          <input type="file" name="icon" id="photoPerson">
+        </div>
+        <div class="form-group">
+          <label for="imageAnnounce">Imagens para o anúncio:</label>
+          <input type="file" name="image" />
+        </div>
+        <br /><br /><br />
+        <center><input class="btn btn-info" type="submit" value="Cadastrar Anúncio"></center>
+      </div>
+    </form>
+  </section>
     
     <hr>
     <footer class="text-muted">
