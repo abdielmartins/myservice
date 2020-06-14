@@ -24,14 +24,21 @@
 
     <header>
       <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom border-info shadow-sm">
-          <a href="{% url 'home' %}"><img class="" src="{% static "images/myservice.png" %}" alt="" width="72" height="72"></a>
+          <a href="{% url 'home' %}"><img class="" src="{% static "images/assets/myservice.png" %}" alt="" width="72" height="72"></a>
           <h5 class="my-0 mr-md-auto" id="gradient">My Service</h5>
           <nav class="my-2 my-md-0 mr-md-3">
+            {% if user.is_authenticated %}
             <a class="btn btn-outline-info" href="{% url 'about' %}">Sobre</a>
             <a class="btn btn-outline-info" href="{% url 'faq' %}">FAQ / SAC</a>
-            <a class="btn btn-outline-info" href="#">Quero Trabalhar</a>
+            <a class="btn btn-info" href="{% url 'create' %}">Anunciar</a>
+            <a class="btn btn-info" href="{% url 'main' %}">Contratar</a>
+            <a class="btn btn-info" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <a class="btn btn-outline-info" href="{% url 'about' %}">Sobre</a>
+            <a class="btn btn-outline-info" href="{% url 'faq' %}">FAQ / SAC</a>
             <a class="btn btn-info" href="{% url 'register' %}">Registre-se</a>
             <a class="btn btn-info" href="{% url 'login' %}">Login</a>
+            {% endif %}
           </nav>
         </div> 
   </header>
@@ -104,11 +111,10 @@
     <footer class="text-muted">
       <div class="container">
         <p class="float-right">
-          <a href="#">Back to top</a>
+          <a href="#">Voltar ao inicio</a>
         </p>
-        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
-      </div>
+        <p>&copy; 2020, MyService Serviços de Internet. CNPJ 11.111.111/0001-11 - Av. Presidente, 1000 - Curitiba/SP - Brasil</p>
+        </div>
     </footer>
 
     <!-- Bootstrap core JavaScript

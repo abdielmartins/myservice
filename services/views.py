@@ -3,6 +3,10 @@ from django.contrib.auth.decorators import login_required
 from .models import Services
 from django.utils import timezone
 
+def main(request):
+    services = Services.objects
+    return render(request, 'services/main.html', {'services':services})
+
 @login_required
 def create(request):
     if request.method == 'POST':

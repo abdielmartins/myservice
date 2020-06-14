@@ -20,7 +20,7 @@ def login_view(request):
         login(request, user)
         if next:
             return redirect(next)
-        return redirect('/')
+        return redirect('/services/main')
 
     context = {
         'form': form,
@@ -40,7 +40,7 @@ def register_view(request):
         login(request, new_user)
         if next:
             return redirect(next)
-        return redirect('/')
+        return redirect('/services/main')
 
     context = {
         'form': form,
