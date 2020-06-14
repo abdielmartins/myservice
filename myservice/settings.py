@@ -26,7 +26,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'myservice',
-    'crispy_forms'
+    'crispy_forms',
+    'services'
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -111,3 +112,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "myservice/static")
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "myservice/media")
