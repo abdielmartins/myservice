@@ -4,6 +4,7 @@ from . import views
 from .views import home
 from accounts.views import login_view, register_view, logout_view
 from services.views import create
+from services.views import detail
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -16,4 +17,5 @@ urlpatterns = [
     path('accounts/register/', register_view, name="register"),
     path('accounts/logout/', logout_view, name="logout"),
     path('services/create', create, name="create"),
+    path('services/<int:services_id>', detail, name="detail"), 
 ] + static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

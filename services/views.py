@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Services
 from django.utils import timezone
@@ -15,8 +15,12 @@ def create(request):
             services.pub_date = timezone.datetime.now()
             services.worker = request.user
             services.save()
-            return redirect ('home')
+            return redirect ('/services/' + str(services.id)) 
         else:   
             return render(request, 'create.html', {'error': 'All fields are required'})
     else:    
         return render(request, 'services/create.html')
+
+def detail(request, services_id):
+    services = get_object_or_404(Services, pk=services_id)
+    return render(request, 'services/detail.html',{'services':services})
