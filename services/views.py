@@ -11,11 +11,11 @@ def main(request):
 @login_required
 def create(request):
     if request.method == 'POST':
-        if request.POST['title'] and request.POST['body'] and request.FILES['icon'] and request.FILES['image']:
+        if request.POST['title'] and request.POST['body'] and request.FILES['image']:
             services = Services()
             services.title = request.POST['title']
             services.body = request.POST['body']
-            services.icon = request.FILES['icon']
+            services.local = request.POST['local']
             services.image = request.FILES['image']
             services.pub_date = timezone.datetime.now()
             services.worker = request.user

@@ -5,6 +5,7 @@ class Services(models.Model):
     title = models.CharField(max_length=255)
     pub_date = models.DateTimeField()
     body = models.TextField()
+    local = models.CharField(max_length=50, default='Centro')
     image = models.ImageField(upload_to='images/services')
     services_done = models .IntegerField (default=1)
     worker = models.ForeignKey(User, on_delete=models.CASCADE)
