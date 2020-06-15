@@ -37,12 +37,12 @@
          {% csrf_token %}
             <div class="row">
               <div class="col">
-                <label for="nome">* Nome: </label>
-                <input id="Nome" name="Nome" placeholder="Seu nome" class="form-control input-md" required="" type="text">
+                <label for="name">* Nome: </label>
+                <input id="Nome" name="name" placeholder="Seu nome" class="form-control input-md" required="" type="text">
               </div>
               <div class="col">
                 <label for="surname">* Sobrenome: </label>
-                <input id="Nome" name="Nome" placeholder="Segundo nome e/ou Sobrenome" class="form-control input-md" required="" type="text">
+                <input id="surname" name="surname" placeholder="Segundo nome e/ou Sobrenome" class="form-control input-md" required="" type="text">
             </div>
             </div>
             <br>
@@ -53,50 +53,50 @@
                  <input id="cpf" name="cpf" placeholder="Apenas números" class="form-control input-md" required="" type="text" maxlength="11" pattern="[0-9]+$">
                </div>
                <div class="col">
-                 <label for="RG">* RG: </label>
+                 <label for="rg">* RG: </label>
                  <input id="rg" name="rg" placeholder="Apenas números" class="form-control input-md" required="" type="text" maxlength="9" pattern="[0-9]+$">
                </div>
                <div class="col">
                  <label for="birth_date">* Data de Nascimento: </label>
-                 <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+                 <input id="birth_date" name="birth_date" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
                </div>
              </div>
             <br>
             <hr>
             <div class="row">
                <div class="col">
-                 <label for="tel">* Celular: </label>
-                 <input id="prependedtext" name="prependedtext" class="form-control" placeholder="XX XXXXX-XXXX" type="text" maxlength="13" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$" OnKeyPress="formatar('## #####-####', this)">
+                 <label for="cel">* Celular: </label>
+                 <input id="cel" name="cel" class="form-control" placeholder="XX XXXXX-XXXX" type="text" maxlength="13" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$" OnKeyPress="formatar('## #####-####', this)">
                </div>
                <div class="col">
-                  <label for="CEP">* CEP: </label>
+                  <label for="cep">* CEP: </label>
                   <input id="cep" name="cep" placeholder="Apenas números" class="form-control input-md" required="" value="" type="search" maxlength="8" pattern="[0-9]+$">
               </div>
             </div>
             <br>
             <div class="row">
               <div class="col-md-9">
-                <label for="Adress">* Endereço: </label>
-                <input id="rua" name="rua" class="form-control" placeholder="" required=""  type="text">
+                <label for="adress">* Endereço: </label>
+                <input id="adress" name="adress" class="form-control" placeholder="" required=""  type="text">
               </div>
               <div class="col-md-3">
-                <label for="Num">* Número: </label>
-                <input id="numero" name="numero" class="form-control" placeholder="" required="" type="text">
+                <label for="num">* Número: </label>
+                <input id="num" name="num" class="form-control" placeholder="" required="" type="text">
               </div>
             </div>
             <br>
               <div class="row">
               <div class="col">
-                <label for="Distric">* Bairro: </label>
-                <input id="bairro" name="bairro" class="form-control" placeholder="" required="" type="text">
+                <label for="district">* Bairro: </label>
+                <input id="district" name="district" class="form-control" placeholder="" required="" type="text">
               </div>
               <div class="col">
-                <label for="State">* Cidade: </label>
-                <input id="cidade" name="cidade" class="form-control" placeholder="" required="" type="text">
+                <label for="city">* Cidade: </label>
+                <input id="city" name="city" class="form-control" placeholder="" required="" type="text">
               </div>
               <div class="col">
-                <label for="State">* Estado: </label>
-                <input id="estado" name="estado" class="form-control" placeholder="" required="" type="text">
+                <label for="state">* Estado: </label>
+                <input id="state" name="state" class="form-control" placeholder="" required="" type="text">
               </div>
             </div>
             <br>
@@ -107,20 +107,20 @@
             <div class="row">
                <div class="col">
                  <label for="profile-pic">Foto de Perfil: </label>
-                 <input id="icon" name="icon" type="file" class="form-data">
+                 <input id="icon" name="profile_picture" type="file" class="form-data">
                </div>
                <div class="col">
                  <label for="profile-valid">Foto do RG: </label>
-                 <input id="image" name="image" type="file" class="form-data">
+                 <input id="image" name="profile_validation" type="file" class="form-data">
                </div>
              </div>
              <hr>
              <p class="help-block"><h11>*</h11> = Campo Obrigatório </p>
-             <p class="help-block"><h11>**</h11> = Campo Obrigatório </p>
+             <p class="help-block"><h11>**</h11> = O preenchimento de todos os campos é obrigatório, todos são verificados para segurança dos usuários da plataforma. </p>
              <hr>
              <div class="row">
               <div class="col">
-                <center><input class="btn btn-info" type="submit" value="Cadastrar Anúncio"></center>
+                <center><input class="btn btn-info" type="submit" value="Entrar no MyService"></center>
               </div>
             </div>
              </div> 
