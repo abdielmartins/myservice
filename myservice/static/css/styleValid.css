@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+html,body,h1,h2,h3,h4,h5 {
+    font-family: "Work Sans", sans-serif;
+}
+
+body {
+    padding: 5% 20% 10% 20%;
+    background: rgb(0,242,96);
+    background: linear-gradient(90deg, rgba(0,242,96,1) 35%, rgba(5,117,230,1) 100%);
+}
+
+.container-fluid {
+    padding: 25px;
+    background: #FFFFFF;
+    border-radius: 30px ;
+}
+
+#gradientText {
+        font-size: 32px;
+        background: -webkit-linear-gradient(#00F260, #0575E6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+.loginBtn {
+    padding-top: 3%;
+}
+
+#headerLogin {
+    padding: 10px 0 20px 0;
+}
