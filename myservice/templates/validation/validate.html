@@ -41,18 +41,23 @@
             <div class="row">
               <div class="col">
                 <label for="nome">Nome: </label>
-                <input type="text" class="form-control">
+                <input type="text" placeholder="Primeiro nome" class="form-control">
               </div>
               <div class="col">
                 <label for="surname">Sobrenome: </label>
-                <input type="text" class="form-control">
+                <input type="text" placeholder="Segundo nome e/ou Sobrenome" class="form-control">
               </div>
             </div>
             <br>
+            <hr>
             <div class="row">
                <div class="col">
                  <label for="cpf">CPF: </label>
                  <input id="cpf" name="cpf" placeholder="Apenas números" class="form-control input-md" required="" type="text" maxlength="11" pattern="[0-9]+$">
+               </div>
+               <div class="col">
+                 <label for="RG">RG: </label>
+                 <input id="rg" name="rg" placeholder="Apenas números" class="form-control input-md" required="" type="text" maxlength="9" pattern="[0-9]+$">
                </div>
                <div class="col">
                  <label for="birth_date">Data de Nascimento: </label>
@@ -60,6 +65,7 @@
                </div>
              </div>
             <br>
+            <hr>
             <div class="row">
                <div class="col">
                  <label for="tel">Telefone: </label>
@@ -68,25 +74,43 @@
                <div class="col">
                   <label for="CEP">CEP: </label>
                   <input id="cep" name="cep" placeholder="Apenas números" class="form-control input-md" required="" value="" type="search" maxlength="8" pattern="[0-9]+$">
-                  <br>
-                  <div class="text-right">
-                     <button type="button" class="btn btn-info" onclick="pesquisacep(cep.value)">Validar CEP</button>
-                  </div>
-               </div>
-             </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col">
+                <label for="Adress">Endereço: </label>
+                <input id="adress" name="adress" placeholder="Ex.: Rua Fulano de Tal" class="form-control input-md" required="" type="text" maxlength="50">
+              </div>
+              <div class="col">
+                <label for="Num">Número: </label>
+                <input id="number" name="number" placeholder="Ex.: 123" class="form-control input-md" required="" type="text" maxlength="4">
+              </div>
+              <div class="col">
+                <label for="Distric">Bairro: </label>
+                <input id="distric" name="distric" placeholder="Ex.: Vila Nova" class="form-control input-md" required="" type="text" maxlength="30">
+              </div>
+              <div class="col">
+                <label for="State">Estado: </label>
+                <input id="estate" name="estate" placeholder="Ex.: PR" class="form-control input-md" required="" type="text" maxlength="2">
+              </div>
+            </div>
+            <br>
+            <div class="text-right">
+                <button type="button" class="btn btn-info" onclick="pesquisacep(cep.value)">Validar CEP</button>
+            </div>
             <hr>
             <div class="row">
                <div class="col">
-                 <label for="nome">Nome: </label>
-                 <input type="text" class="form-control">
+                 <label for="profile-pic">Foto de Perfil: </label>
+                 <input id="icon" name="icon" type="file" class="form-data">
                </div>
                <div class="col">
-                 <label for="surname">Sobrenome: </label>
-                 <input type="text" class="form-control">
+                 <label for="profile-valid">Foto do RG: </label>
+                 <input id="image" name="image" type="file" class="form-data">
                </div>
              </div>
 
-            
          </form>
       </div>
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
