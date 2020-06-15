@@ -43,16 +43,30 @@
         </div> 
   </header>
 
-    {% for services in services.all %}
-    <div class="col-2">
-        <img src="{{ services.image.url }}" class="img-fluid" />
+  <div class="album py-5 bg-white">
+    <div class="container">
+      <div class="row">
+      
+        {% for services in services.all %}
+        <div class="col-sm-3">
+          <div class="card text-center">
+            <div class="card-header"> {{ services.title }} </div>
+              <div class="card-body">
+              <img src="{{ services.image.url }}" class="rounded img-fluid" width="75">
+              <hr>
+              <a href="{% url 'detail' services.id %}" class="btn btn-info">Saiba mais...</a>
+              </div>
+              <div class="card-footer text-muted"> </div>
+            </div>
+          </div>  
+        {% endfor %}
+
       </div>
-      <div class="col-6">
-        <h1>{{ services.title }}</h1>
-        <p>{{ services.summary }}</p>
-      </div>
-    {% endfor %}
-    
+    </div>
+  </div>
+
+
+
     <hr>
     <footer class="text-muted">
       <div class="container">
