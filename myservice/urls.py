@@ -4,7 +4,7 @@ from . import views
 from .views import home
 from accounts.views import login_view, register_view, logout_view
 from services.views import create, detail, main
-from validation.views import validate
+from validation.views import validate, profile
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -20,4 +20,5 @@ urlpatterns = [
     path('services/create', create, name="create"),
     path('services/<int:services_id>', detail, name="detail"),
     path('validation/validate', validate, name="validate"),
+    path('validation/profile', profile, name="profile"),
 ] + static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

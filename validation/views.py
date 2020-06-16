@@ -28,3 +28,9 @@ def validate(request):
             return render(request, 'validate.html', {'error': 'All fields are required'})
     else:    
         return render(request, 'validation/validate.html')
+
+@login_required
+def profile(request):
+    user_id = request.user.id
+    validation = Validation.objects.get(uservalid_id=user_id)
+    return render(request, 'validation/profile.html', {'validation':validation})
