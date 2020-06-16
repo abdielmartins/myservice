@@ -56,7 +56,7 @@
               <hr>
               <a href="{% url 'detail' services.id %}" class="btn btn-info">Saiba mais...</a>
               </div>
-              <div class="card-footer text-muted"> </div>
+              <div class="card-footer text-muted">{{ services.worker}}</div>
             </div>
           </div>  
         {% endfor %}
