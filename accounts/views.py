@@ -39,7 +39,7 @@ def register_view(request):
         login(request, new_user)
         if next:
             return redirect(next)
-        return redirect('/services/main')
+        return redirect('/validation/validate')
 
     context = {
         'form': form,
