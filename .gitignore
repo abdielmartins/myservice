@@ -9,4 +9,4 @@ db.sqlite3
 *.pot
 local_settings.py
 db.sqlite3-journal
-/media
+media

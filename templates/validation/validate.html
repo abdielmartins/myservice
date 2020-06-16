@@ -104,20 +104,31 @@
                 <button type="button" class="btn btn-info" onclick="pesquisacep(cep.value)">Validar CEP</button>
             </div>
             <hr>
+            <br>
             <div class="row">
                <div class="col">
                  <label for="profile-pic">Foto de Perfil: </label>
                  <input id="icon" name="profile_picture" type="file" class="form-data">
                </div>
                <div class="col">
-                 <label for="profile-valid">Foto do RG: </label>
+                 <label for="profile-valid">Agora uma foto segurando seu RG / CNH: </label>
                  <input id="image" name="profile_validation" type="file" class="form-data">
                </div>
              </div>
+             <br>
              <hr>
              <p class="help-block"><h11>*</h11> = Campo Obrigatório </p>
-             <p class="help-block"><h11>**</h11> = O preenchimento de todos os campos é obrigatório, todos são verificados para segurança dos usuários da plataforma. </p>
+             <p class="help-block"><h11>**</h11> = O preenchimento de todos os campos é obrigatório. Após a validação do seu documento, você terá seu perfil verificado.  </p>
              <hr>
+             <div class="row text-center">
+               <div class=col-md-1></div>
+               <div class=col-md-10>
+                  <img src="{% static "images/assets/alert.png"%}" class="rounded float-left" width="25"><p>Atenção: Contrate apenas serviços de perfis verificados pela plataforma!</p> 
+                </div>
+                <div class=col-md-1></div>
+             </div>  
+             <hr>
+             <br>
              <div class="row">
               <div class="col">
                 <center><input class="btn btn-info" type="submit" value="Entrar no MyService"></center>
